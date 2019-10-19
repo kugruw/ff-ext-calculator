@@ -1,0 +1,84 @@
+html{
+    transform-origin: top;
+    animation: st .2s;
+}
+
+@keyframes st {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+body {
+    margin: 0;
+    display: flex;
+}
+
+.container {
+    background-color: #303841;
+    width: 208px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    font-family: monospace;
+}
+
+.container::after{
+    content: "";
+    clear: left;
+    display: table;
+}
+
+[class*="ktk-"] {
+    color: #eeeeee;
+    float: left;
+    border: 5px solid #303841;
+    background-color: #3a4750;
+    box-sizing: border-box;
+    padding: 5px;
+    cursor: default;
+    width: 25%;
+    font-size: 14px;
+    animation: sc .3s;
+}
+
+@keyframes sc {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+[class*="ktk-"]:hover {
+    background-color: #eeeeee;
+    color: #3a4750;
+}
+
+[class*="ktk-"]::selection {
+    background-color: transparent;
+}
+
+.ktk-head {
+    width: 100%;
+    text-align: right;
+}
+
+.screen {
+    font-size: 20.9px;
+    overflow-x: auto;
+    scrollbar-color: #D7D7D9 #f1f1f2;
+    scrollbar-width: thin;
+}
+
+.saved {
+    word-wrap: break-word;
+}
+
+/*color theme #232931 #393e46 #4ecca3 #eeeeee*/

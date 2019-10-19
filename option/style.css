@@ -1,0 +1,22 @@
+form > div {
+    padding: 5px 5px;
+}
+
+.head {
+    font-size: 18px;
+    padding: 5px 0;
+}
+
+label{
+    width: 72px;
+    display: inline-block;
+}
+
+.colours span{
+    width: 60px;
+    display: inline-block;
+}
+
+fieldset{
+    border: none;
+}
