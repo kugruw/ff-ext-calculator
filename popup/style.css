@@ -81,4 +81,8 @@ body {
     word-wrap: break-word;
 }
 
+.hide{
+    display: none;
+}
+
 /*color theme #232931 #393e46 #4ecca3 #eeeeee*/

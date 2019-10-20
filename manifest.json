@@ -13,7 +13,8 @@
     },
     "options_ui": {
         "page": "option/index.html",
-        "browser_style": true
+        "open_in_tab": true,
+        "browser_style": false
     },
     "commands": {
         "_execute_browser_action": {

@@ -7,43 +7,53 @@
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
-<body>
-    <form>
-        <div>
-            <div class="head">Interface</div>
-            <fieldset>
-                <input type="checkbox" value="view">
-                <span>Screen only</span>
-            </fieldset>
-        </div>
-        <div>
-            <div class="head">Colours</div>
-            <fieldset class="colours">
-                <label for="calculator">Calculator</label>
-                <input type="radio" name="calculator" value="303841" checked><span>#303841</span>
-                <input type="radio" name="calculator" value=""><span></span>
-                <input type="radio" name="calculator" value=""><span></span>
-                <input type="radio" name="calculator" value=""><span></span>
-            </fieldset>
-            <fieldset class="colours">
-                <label for="button">Button</label>
-                <input type="radio" name="button" value="3a4750" checked><span>#3a4750</span>
-                <input type="radio" name="button" value=""><span></span>
-                <input type="radio" name="button" value=""><span></span>
-                <input type="radio" name="button" value=""><span></span>
-            </fieldset>
-            <fieldset class="colours">
-                <label for="font">Font</label>
-                <input type="radio" name="font" value="eeeeee" checked><span>#eeeeee</span>
-                <input type="radio" name="font" value=""><span></span>
-                <input type="radio" name="font" value=""><span></span>
-                <input type="radio" name="font" value=""><span></span>
-            </fieldset>
-        </div>
-        <div>
-            <button type="submit">Save</button>
-        </div>
-    </form>
+<body class="ctr">
+    <div class="container">
+        <h1>Calculator Settings</h1>
+        <section class="clearfix">
+            <form>
+                <div>
+                    <div class="head">Interface</div>
+                    <fieldset>
+                        <input type="checkbox" value="view">
+                        <span>Screen only</span>
+                    </fieldset>
+                </div>
+                <div>
+                    <div class="head">Colours</div>
+                    <fieldset class="colours">
+                        <label for="calculator">Calculator</label>
+                        <input type="radio" name="calculator" value="303841" checked><span>#303841</span>
+                        <input type="radio" name="calculator" value="ffbbcc"><span>#ffbbcc</span>
+                        <input type="radio" name="calculator" value="bd83ce"><span>#bd83ce</span>
+                        <input type="radio" name="calculator" value="ed1250"><span>#ed1250</span>
+                    </fieldset>
+                    <fieldset class="colours">
+                        <label for="button">Button</label>
+                        <input type="radio" name="button" value="3a4750" checked><span>#3a4750</span>
+                        <input type="radio" name="button" value="ffcccc"><span>#ffcccc</span>
+                        <input type="radio" name="button" value="e5b0ea"><span>#e5b0ea</span>
+                        <input type="radio" name="button" value="042f4b"><span>#042f4b</span>
+                    </fieldset>
+                    <fieldset class="colours">
+                        <label for="font">Font</label>
+                        <input type="radio" name="font" value="eeeeee" checked><span>#eeeeee</span>
+                        <input type="radio" name="font" value="ffeecc"><span>#ffeecc</span>
+                        <input type="radio" name="font" value="f7e8f6"><span>#f7e8f6</span>
+                        <input type="radio" name="font" value="fff6da"><span>#fff6da</span>
+                    </fieldset>
+                </div>
+                <div class="clearfix">
+                    <button type="submit">Save</button>
+                    <button type="button">Cancel</button>
+                </div>
+            </form>
+            <div class="ctr">
+                <iframe src="../popup/index.html" frameborder="0"></iframe>
+            </div>
+        </section>
+    </div>
+    <script src="ml.js"></script>
     <script src="script.js"></script>
 </body>
 
