@@ -57,7 +57,17 @@
 
     s('button[type=submit]').onclick = () => {
         browser.storage.sync.set(storage);
+        log('Options Saved');
     }
+
+    browser.storage.sync.get(['colours', 'interface']).then(res => {
+        if(res == undefined) return log('There is no option saved');
+        if(res.interface.screenOnly == true) input.interface.click();
+
+        s(`fieldset.calculator > input[value="${res.colours.calculator.substr(1, res.colours.calculator.length)}"]`).click()
+        s(`fieldset.calculator > input[value="${res.colours.button.substr(1, res.colours.button.length)}"]`).click()
+        s(`fieldset.calculator > input[value="${res.colours.font.substr(1, res.colours.font.length)}"]`).click()
+    })
 })();
 
 //Kadang error harus muat ulang

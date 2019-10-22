@@ -124,6 +124,3 @@ browser.storage.sync.get(['colours', 'interface']).then(res => {
         el.style.color = res.colours.font
     });
 });
-
-//lanjutin option yg kepilih sma yg keklik ui
-//sma bug yg gak sesuai sma option
