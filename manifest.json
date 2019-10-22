@@ -28,5 +28,10 @@
         "32": "img/favicon-32x32.png",
         "48": "img/favicon-48x48.png",
         "128": "img/favicon-128x128.png"
+    },
+    "applications": {
+        "gecko": {
+            "id": "andreasluhut2911@gmail.com"
+        }
     }
 }

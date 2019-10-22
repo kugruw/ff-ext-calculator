@@ -9,7 +9,7 @@ html, body{
     align-items: center;
 }
 
-form, iframe{
+.form, iframe{
     float: left;
     padding: 24px;
 }
@@ -19,7 +19,7 @@ h1{
     margin-bottom: 48px;
 }
 
-form > div {
+.form > div {
     padding: 5px 5px;
 }
 
