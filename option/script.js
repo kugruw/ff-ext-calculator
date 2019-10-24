@@ -1,9 +1,15 @@
 (function () {
-    const iframe = s('iframe').contentWindow;
-    const ui = {
-        calculator: iframe.document.querySelector('div.container'),
-        buttons: iframe.document.querySelectorAll('[class*="ktk-"]'),
+    const alert = {
+        optionElm: s('.alert-option'),
+        message: {
+            err: 'Color preview is not available now'
+        }
     }
+
+    const ui = {
+        calculator: sf('.container'),
+        buttons: sfs('[class*="ktk-"]'),
+    };
 
     const input = {
         interface: s('input[type=checkbox]'),
@@ -26,10 +32,18 @@
     };
 
     input.interface.onclick = function () {
-        const btn = iframe.document.querySelector('section');
-        btn.classList.toggle('hide');
-        if (this.checked == true) storage.interface.screenOnly = true;
-        else storage.interface.screenOnly = false;
+        const btn = sf('section');
+        if (this.checked == true) {
+            storage.interface.screenOnly = true;
+            btn.classList.add('hide');
+            ui.calculator.classList.add('no-padding');
+            sf('.ktk-head').classList.add('brd-rad');
+        } else {
+            storage.interface.screenOnly = false;
+            btn.classList.remove('hide');
+            ui.calculator.classList.remove('no-padding');
+            sf('.ktk-head').classList.remove('brd-rad');
+        }
     }
 
     input.colours.calculator.forEach(el => {
@@ -57,17 +71,20 @@
 
     s('button[type=submit]').onclick = () => {
         browser.storage.sync.set(storage);
-        log('Options Saved');
+        alert.optionElm.show();
+        alert.optionElm.innerText = 'Options saved';
+        alert.optionElm.style.color = storage.colours.font;
+        alert.optionElm.style.backgroundColor = storage.colours.calculator;
     }
 
     browser.storage.sync.get(['colours', 'interface']).then(res => {
-        if(res == undefined) return log('There is no option saved');
-        if(res.interface.screenOnly == true) input.interface.click();
+        if (res == undefined) return log('There is no option saved');
+        if (res.interface.screenOnly == true) input.interface.click();
 
-        s(`fieldset.calculator > input[value="${res.colours.calculator.substr(1, res.colours.calculator.length)}"]`).click()
-        s(`fieldset.calculator > input[value="${res.colours.button.substr(1, res.colours.button.length)}"]`).click()
-        s(`fieldset.calculator > input[value="${res.colours.font.substr(1, res.colours.font.length)}"]`).click()
-    })
+        s(`input[value="${res.colours.calculator.substr(1, res.colours.calculator.length)}"]`).click();
+        s(`input[value="${res.colours.button.substr(1, res.colours.button.length)}"]`).click();
+        s(`input[value="${res.colours.font.substr(1, res.colours.font.length)}"]`).click();
+    });
 })();
 
 //Kadang error harus muat ulang

@@ -85,4 +85,12 @@ body {
     display: none;
 }
 
+.no-padding{
+    padding: 0;
+}
+
+.brd-rad{
+    border-radius: 4px;
+}
+
 /*color theme #232931 #393e46 #4ecca3 #eeeeee*/

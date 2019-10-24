@@ -44,7 +44,14 @@ fieldset{
 
 button{
     float: right;
+}
+
+button, .alert-option{
     margin: 0 5px;
+}
+
+.alert-option{
+    padding: 2px 4px;
 }
 
 .clearfix::after{

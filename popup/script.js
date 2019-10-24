@@ -115,7 +115,11 @@ browser.storage.sync.get(['colours', 'interface']).then(res => {
         buttons: $s('[class*="ktk-"]'),
     }
 
-    if(res.interface.screenOnly == true) $('section').classList.add('hide');
+    if (res.interface.screenOnly == true) {
+        $('section').classList.add('hide');
+        ui.calculator.classList.add('no-padding');
+        $('.ktk-head').classList.add('brd-rad');
+    }
 
     ui.calculator.style.backgroundColor = res.colours.calculator;
     ui.buttons.forEach(el => {

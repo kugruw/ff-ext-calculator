@@ -1,5 +1,7 @@
 const s = o => document.querySelector(o),
     ss = o => document.querySelectorAll(o),
+    sf = o => s('iframe').contentWindow.document.querySelector(o),
+    sfs = o => s('iframe').contentWindow.document.querySelectorAll(o),
     log = console.log;
 
 Object.prototype.show = function(){this.classList.remove('hide')}
