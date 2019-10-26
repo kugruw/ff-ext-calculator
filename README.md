@@ -1,4 +1,4 @@
-# Mozilla Calculator Add-On
+# Mozilla Calculator Add-on
 
 Custom your calculator color, and interface in the option page
 
